@@ -13,7 +13,7 @@ def living_room():
         stair_way()
     
     elif "couch" in choice:
-        dead("The coats on the couch start to stir.\nYou get wrapped up and sucked into a black void.\nSurrounded by tiny gnomes.")
+        dead("The coats on the couch start to stir.\nYou get wrapped up and sucked into a black void.\nSurrounded by tiny gnomes and the great Cthulhulu staring at you.\nYou go insane.\nAnd attempt to eat your own head.")
     
     elif "box" in choice:
         dead("You move to inspect the box spring, when suddenly it sprouts a giant dck and attempts to rape you in the eyes.\nYou narrowly escape back to the frozen suburban nightmare.")
@@ -67,7 +67,18 @@ def basement():
 
 #def kitchen():
 
-#def alex_room():
+def alex_room():
+    print "You look around the room, there is nothing of note here except a small frog statue with a stick in its mouth"
+    choice = raw_input("> ")
+    if "smell" in choice:
+        print "Smells of faintly of patchuli"
+
+    elif "leave" or "back" in choice:
+        stair_way()
+    
+    elif "Look" in choice:
+        print "Upon further inspection you see a riding harness and a small elephant in the corner"
+
 
 #def dan_room():
 
@@ -101,7 +112,8 @@ def start():
     elif "smell" in choice:
         print "You smell the freshly cut grass, and troubles of middle class"
     else:
-        dead("Your suburban nightmare awaits!")
+        print "Sometimes in life, some things are beyond our comprehension, this is one of those things. Try again."
+        start()
 
 def dead(why):
     print why, "Congratulations!"
